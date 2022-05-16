@@ -9,6 +9,8 @@ button.insertAdjacentElement("afterend", mainContainer);
 function numberOfSquares() {
   button.addEventListener("click", function () {
     sq = parseInt(prompt("Enter the number of squares per row "));
+    // if (sq > 10) numberOfSquares();
+    div = Array.from(Array(sq), () => new Array(sq));
     clearGrid();
     createGrid(mainContainer);
   });
