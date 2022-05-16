@@ -1,0 +1,11 @@
+.square {
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid black;
+}
+
+.colorTrial {
+  background-color: orange;
+}
