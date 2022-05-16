@@ -8,8 +8,10 @@ button.insertAdjacentElement("afterend", mainContainer);
 //take the value of number of rows/columns of the grid from user
 function numberOfSquares() {
   button.addEventListener("click", function () {
-    sq = parseInt(prompt("Enter the number of squares per row "));
-    // if (sq > 10) numberOfSquares();
+    do {
+      sq = parseInt(prompt("Enter the number of squares per row "));
+    } while (sq > 100);
+    if (!Number.isNaN(sq)) button.innerText = sq;
     div = Array.from(Array(sq), () => new Array(sq));
     clearGrid();
     createGrid(mainContainer);
@@ -33,7 +35,7 @@ function createGrid(button) {
       div[i][j].style.padding = "0px";
       div[i][j].style.width = `${length / sq}px`;
       div[i][j].style.height = `${length / sq}px`;
-      div[i][j].style.border = "2px solid black";
+      div[i][j].style.border = "1px solid black";
       // div[i][j].style[border - sizing] = "border-box";
       container[i].appendChild(div[i][j]);
     }
